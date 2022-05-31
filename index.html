@@ -100,7 +100,7 @@
                   <div class="android_regtister conText">
                       <P>Email</P>
                       <div class="input1" >
-                          <P ><input name="" type="text"  value="Enter email address" class="text_content1"/></P>
+                          <P ><input name="" type="text" id="text0"  value="Enter email address" class="text_content1"/> <span class="notice"></span></P>
                       </div>
                       <div class="btn1">
                               <a href="#"><img src="images/tc_btn.png"></a>
@@ -109,7 +109,7 @@
                   <div class="ios_regtister  conText no">
                       <P>Email</P>
                       <div class="input1" >
-                          <P ><input name="" type=" text"  value="Enter email address" class="text_content1"/></P>
+                          <P ><input name="" type=" text"  id="text1"  value="Enter email address" class="text_content1"/> <span id="notice1"></span></P>
                       </div>
                   
                       <div class="btn1">
@@ -125,9 +125,10 @@
    <div class="swiper-container swiper-fullscreen">
     <div class="swiper-wrapper">
       <div class="swiper-slide slide1">
-        <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bgvideo video">
+        <!-- <video x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bgvideo video">
             <source src="media/top1.mp4" type="video/mp4">
-        </video> 
+        </video>  -->
+        <img src="images/index_topa.gif" class="index_top">
         <div class="nav_box">
             <img src="images/cover_logo.png">
           </div>
@@ -217,6 +218,27 @@
             $('#video-play')[0].play();
         });
     })();
+    </script>
+
+<script>
+    /*id是全局唯一的，不需要获取元素，直接使用*/
+
+    let re = /^\w+(?:\.\w+){0,1}@[a-zA-Z0-9]{2,14}(?:\.[a-z]{2,4}){1,2}$/;
+
+    //绑定文本输入时触发的事件
+    $('#text0,#text1').oninput = function() {
+
+        let textBox = this.value;
+
+        //判断检测这个值是否正确，
+        if (re.test(textBox)) { //如果验证正确执行以下代码
+            $('.notice').innerHTML = '邮箱验证成功';
+            $('.notice').style.color = 'plum';
+        } else { //验证成功，执行以下代码
+            $('.notice').innerHTML = '邮箱验证不成功，请重新输入';
+            $('.notice').style.color = 'green';
+        }
+    }
     </script>
 </body>
 </html>
