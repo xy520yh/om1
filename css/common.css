@@ -34,8 +34,8 @@ body{position:relative;-webkit-text-size-adjust:none;color:#fff;font-size:24px;}
 html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overflow-x: hidden; }/*åŽ»é™¤appleè®¾å¤‡ç‚¹å‡»åº•è‰²*/
 
 /*part*/
-.part1_main{position:relative;height:100%;width:100%;background:#fff;overflow:hidden}
-.main_show{position:absolute;top:0;bottom:0;width:100%;height:100%;background:url(../images/phone_part01.jpg) no-repeat;background-size:cover;}
+.part1_main{position:relative;height:100%;width:100%;background:#fff;overflow:hidden;border:2px solid #00f;}
+.main_show{position:relative;top:0;bottom:0;width:100%;height:100%;background:url(../images/phone_part01.jpg) no-repeat;background-size:cover;border:2px solid #f0f;}
 
 .part1_header{background:rgba(23,12,12,0.88);height:1.35rem; position: absolute; top:0;left:0;width:100%;display: flex; justify-content: center; align-items: center;}
 .header_icon{height:1.08rem;}
@@ -65,7 +65,7 @@ html,body{ -webkit-tap-highlight-color: transparent;width:100%;height:100%;overf
 .part1_btn  img{width:7.5rem;height: 1.24rem;-webkit-animation: magnify .6s linear infinite alternate;	-moz-animation: magnify .6s linear infinite alternate;	animation: magnify .6s linear infinite alternate;}
 .part1_footer{position:absolute;width:7.5rem;display: flex; justify-content: center;bottom:0rem; left:50%;margin-left:-3.75rem;}
 .part1_footer img{width:7.5rem;height:0.51rem;}
-.bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;}
+.bg-video{width:100%;height:100vh;display:block;object-fit:cover;position:absolute;top:0;left:0;border:10px solid #f00;}
 
 
 /* animation: arrowAn 0.8s infinite; */
